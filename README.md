@@ -1,27 +1,47 @@
 # PruebaAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Este proyecto es una aplicación simple desarrollada en Angular 11 o superior, utilizando PrimeNG para el diseño de la interfaz. La aplicación permite registrar y consultar clientes, además de incluir pruebas unitarias con Jasmine y Karma.
 
-## Development server
+## Tabla de Contenidos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. [Características del Proyecto](#características-del-proyecto)
+2. [Requisitos Previos](#requisitos-previos)
+3. [Instalación](#instalación)
+4. [Ejecutar el Proyecto](#ejecutar-el-proyecto)
+5. [Uso de la Aplicación](#uso-de-la-aplicación)
 
-## Code scaffolding
+## Características del Proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Registro de clientes con los siguientes datos:
+  - Identificación
+  - Nombre
+  - Apellidos
+  - Email
+  - Celular
+- Consulta de clientes con paginación (10 registros por página) y ordenamiento por nombre y apellidos.
+- Manejo de excepciones para garantizar la robustez de la aplicación.
+- Pruebas unitarias con cobertura del 90% utilizando Jasmine y Karma.
 
-## Build
+## Requisitos Previos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Antes de comenzar, asegúrate de tener instalados:
 
-## Running unit tests
+- [Node.js](https://nodejs.org/) (versión 12 o superior)
+- [Angular CLI](https://angular.io/cli) (versión 11 o superior)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalación
+1. Clona el repositorio en tu máquina local: https://github.com/Luisa-CG/prueba-angular.git
+2. Instala las dependencias del proyecto: npm install
 
-## Running end-to-end tests
+## Ejecutar el proyecto
+Para ejecutar el proyecto ejecuta el comando ng serve.
+La aplicación estará disponible en http://localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Uso de la Aplicación
+Registrar Clientes:
+1. Navega a la sección de registro e ingresa la información del cliente.
+2. Haz clic en "Registrar" para guardar los datos.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Consultar Clientes:
+1. Ve a la sección de consulta.
+2. Puedes buscar por nombre o apellido. Los resultados se mostrarán en una tabla
