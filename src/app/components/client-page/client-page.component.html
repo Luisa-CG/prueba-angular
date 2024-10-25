@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Clientes</h2>
+
+  <div class="search-container">
+    <input id="searchName" type="text" [(ngModel)]="searchName" (input)="onSearch()" pInputText
+      placeholder="Buscar por nombre" />
+    <input id="searchLastname" type="text" [(ngModel)]="searchLastname" (input)="onSearch()" pInputText
+      placeholder="Buscar por apellido" />
+    <button (click)="onSearch()" pButton label="Buscar"></button>
+  </div>
+
+  <p-table [value]="clients" [paginator]="true" [rows]="10" [totalRecords]="totalClients"
+    (onLazyLoad)="loadClients($event)">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Identificación</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-client>
+      <tr>
+        <td>{{ client.identification }}</td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.lastname }}</td>
+        <td>
+          <button (click)="deleteClient(client.identification)" pButton icon="pi pi-trash" class="p-button-danger"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

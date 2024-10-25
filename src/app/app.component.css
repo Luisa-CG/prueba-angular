@@ -1,0 +1,64 @@
+.navbar {
+    background-color: #007ad9;
+    /* Color de fondo del navbar */
+    padding: 1rem;
+    /* Espaciado alrededor del navbar */
+    display: flex;
+    /* Usar flexbox para alinear el contenido */
+    align-items: center;
+    /* Centrar verticalmente el contenido */
+    justify-content: space-between;
+    /* Espaciar título y enlaces */
+}
+
+.navbar-title {
+    color: white;
+    /* Color del texto del título */
+    margin: 0;
+    /* Sin márgenes para el título */
+    font-size: 1.5rem;
+    /* Tamaño de fuente del título */
+}
+
+.navbar ul {
+    list-style-type: none;
+    /* Eliminar los puntos de la lista */
+    display: flex;
+    /* Usar flexbox para alinear los elementos horizontalmente */
+    margin: 0;
+    /* Eliminar márgenes */
+    padding: 0;
+    /* Eliminar padding */
+}
+
+.navbar .nav-item {
+    margin: 0;
+    /* Sin márgenes en los elementos de la lista */
+}
+
+.navbar .nav-link {
+    color: white;
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    font-weight: bold;
+    /* Negrita para el texto */
+    padding: 0.5rem 1rem;
+    /* Espaciado dentro del enlace */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el efecto hover */
+}
+
+.navbar .nav-link:hover {
+    background-color: #005f8d;
+    /* Color de fondo al pasar el ratón */
+    border-radius: 5px;
+    /* Bordes redondeados al pasar el ratón */
+}
+
+.navbar .active {
+    background-color: #005f8d;
+    /* Color de fondo para el enlace activo */
+    border-radius: 5px;
+    /* Bordes redondeados para el enlace activo */
+}

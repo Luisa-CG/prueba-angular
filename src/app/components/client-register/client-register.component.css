@@ -1,0 +1,6 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    /* Ajusta el espacio superior según lo necesites */
+}

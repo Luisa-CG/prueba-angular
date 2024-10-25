@@ -1,0 +1,90 @@
+<p-card header="Registro de Cliente" class="p-mb-4">
+  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="p-fluid">
+
+    <p-divider align="left">
+      <b>Información Personal</b>
+    </p-divider>
+
+    <div class="p-field p-grid">
+      <label for="identification" class="p-col-fixed" style="width: 150px;">Identificación:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-id-card"></i>
+          <input id="identification" formControlName="identification" pInputText required
+            placeholder="Ingresa tu identificación" pattern="[0-9]{8,12}" 
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="p-field p-grid">
+      <label for="name" class="p-col-fixed" style="width: 150px;">Nombre:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input id="name" formControlName="name" pInputText required placeholder="Ingresa tu nombre"
+            pattern="[a-zA-ZÁÉÍÓÚáéíóúÑñ]+(\s[a-zA-ZÁÉÍÓÚáéíóúÑñ]+)*"
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="p-field p-grid">
+      <label for="lastname" class="p-col-fixed" style="width: 150px;">Apellido:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input id="lastname" formControlName="lastname" pInputText required placeholder="Ingresa tu apellido"
+            pattern="[a-zA-ZÁÉÍÓÚáéíóúÑñ]+(\s[a-zA-ZÁÉÍÓÚáéíóúÑñ]+)*"
+          />
+        </span>
+      </div>
+    </div>
+
+    <p-divider align="left">
+      <b>Contacto</b>
+    </p-divider>
+
+    <div class="p-field p-grid">
+      <label for="email" class="p-col-fixed" style="width: 150px;">Email:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-envelope"></i>
+          <input id="email" formControlName="email" pInputText type="email" required
+            placeholder="Ingresa tu correo electrónico" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="p-field p-grid">
+      <label for="phone" class="p-col-fixed" style="width: 150px;">Teléfono:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-phone"></i>
+          <input id="phone" formControlName="phone" pInputText required placeholder="Ingresa tu teléfono"
+            pattern="[0-9]{7,15}"
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="p-field p-grid">
+      <label for="address" class="p-col-fixed" style="width: 150px;">Dirección:</label>
+      <div class="p-col">
+        <span class="p-input-icon-left">
+          <i class="pi pi-home"></i>
+          <input id="address" formControlName="address" pInputText required placeholder="Ingresa tu dirección"
+            pattern="[a-zA-Z0-9ÁÉÍÓÚáéíóúÑñ\s\#\-\.\,]+"
+          />
+        </span>
+      </div>
+    </div>
+
+    <!-- Centered Button -->
+    <div class="button-container">
+      <button type="submit" pButton label="Guardar Cliente" icon="pi pi-check" class="p-button-rounded p-button-success"
+        style="width: 200px;"></button>
+    </div>
+  </form>
+</p-card>
